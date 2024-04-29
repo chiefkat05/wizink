@@ -1,0 +1,3 @@
+/home/chiefkat/Documents/vscodeprojects/wizink - only asio/build/CMakeFiles/game.dir
+/home/chiefkat/Documents/vscodeprojects/wizink - only asio/build/CMakeFiles/edit_cache.dir
+/home/chiefkat/Documents/vscodeprojects/wizink - only asio/build/CMakeFiles/rebuild_cache.dir

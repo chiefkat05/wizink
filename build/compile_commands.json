@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/chiefkat/Documents/vscodeprojects/wizink - only asio/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/game.dir/main.cpp.o -c \"/home/chiefkat/Documents/vscodeprojects/wizink - only asio/main.cpp\"",
+  "file": "/home/chiefkat/Documents/vscodeprojects/wizink - only asio/main.cpp",
+  "output": "CMakeFiles/game.dir/main.cpp.o"
+}
+]

@@ -1,0 +1,3 @@
+/home/chiefkat/Documents/vscodeprojects/wizink/build-linux/CMakeFiles/game.dir
+/home/chiefkat/Documents/vscodeprojects/wizink/build-linux/CMakeFiles/edit_cache.dir
+/home/chiefkat/Documents/vscodeprojects/wizink/build-linux/CMakeFiles/rebuild_cache.dir
