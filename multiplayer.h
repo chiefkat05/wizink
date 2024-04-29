@@ -73,7 +73,7 @@ private:
         start_accept();
     }
 
-    asio::io_context io_context_;
+    asio::io_context &io_context_;
     tcp::acceptor acceptor_;
 };
 
