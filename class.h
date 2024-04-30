@@ -53,7 +53,7 @@ void force(baseChar *parent, baseChar *inflictor)
 void alert(baseChar *parent)
 {
     std::cout << parent->tag << " watches for their next move...\n";
-    parent->speed += 4;
+    parent->speed += 2;
 }
 
 // status force((event *)force);
