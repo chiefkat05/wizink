@@ -28,36 +28,6 @@ int main()
 {
     std::string input;
 
-    std::cout << "--> open server on port 4444 (type 'server')\n";
-    std::cout << "--> open client to port 192.168.4.70/4444 (type 'client')\n";
-
-    std::cin >> input;
-
-    if (input == "server")
-    {
-        server();
-    }
-    if (input == "client")
-    {
-        client chatC;
-        std::cout << "Please enter an ipv4 address (x.x.x.x),"
-                     "no need to enter port since it's always 4444\n";
-
-        input = "";
-        std::cin >> input;
-        chatC.connect(input, "4444");
-
-        std::cout << "connected!\n";
-
-        input = "";
-        while (input != "quit")
-        {
-            std::getline(std::cin, input);
-        }
-    }
-    // server_main();
-    // client();
-
     // std::cout << "You are a 'wizard', trained and equipped with a reality-bending engine which modern technology (as far as you know,) can scarcely compete with.\n"
     //              "Having grown and lived among fellow magic-wielders in a horrid cult, you've now decided to make your move and escape.\n\n";
     // std::cout << "You are stopped by a fellow magic user. His nickname is 'speedy'. Most of the magicians find him annoying and rather pathetic.\n"
