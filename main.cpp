@@ -45,6 +45,14 @@ int main()
         input = "";
         std::cin >> input;
         client(input, "4444");
+
+        input = "";
+        while (input != "quit")
+        {
+            std::getline(std::cin, input);
+
+            chatToServer(chatConnection, input);
+        }
     }
     // server_main();
     // client();

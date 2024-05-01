@@ -32,6 +32,12 @@ public:
                           std::bind(&tcp_connection::handle_write, shared_from_this(),
                                     asio::placeholders::error, asio::placeholders::bytes_transferred));
     }
+    void message(std::string msg)
+    {
+        asio::async_write(socket_, asio::buffer(msg),
+                          std::bind(&tcp_connection::handle_write, shared_from_this(),
+                                    asio::placeholders::error, asio::placeholders::bytes_transferred));
+    }
 
 private:
     tcp_connection(asio::io_context &io_context)
@@ -77,6 +83,11 @@ private:
     tcp::acceptor acceptor_;
 };
 
+void chatToServer(tcp_connection &connection, std::string message)
+{
+    connection.message(message);
+}
+
 void server()
 {
     try
@@ -92,6 +103,8 @@ void server()
         std::cerr << e.what() << '\n';
     }
 }
+
+tcp_connection & chatConnection;
 
 void client(std::string ip, std::string port)
 {
