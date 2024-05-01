@@ -8,8 +8,4 @@
 
 using asio::ip::tcp;
 
-void client()
-{
-}
-
 #endif
