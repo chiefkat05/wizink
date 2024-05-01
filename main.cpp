@@ -39,19 +39,20 @@ int main()
     }
     if (input == "client")
     {
+        client chatC;
         std::cout << "Please enter an ipv4 address (x.x.x.x),"
                      "no need to enter port since it's always 4444\n";
 
         input = "";
         std::cin >> input;
-        client(input, "4444");
+        chatC.connect(input, "4444");
+
+        std::cout << "connected!\n";
 
         input = "";
         while (input != "quit")
         {
             std::getline(std::cin, input);
-
-            chatToServer(chatConnection, input);
         }
     }
     // server_main();
