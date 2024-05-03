@@ -3,6 +3,7 @@ CMakeFiles/game.dir/main.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h \
  /home/chiefkat/Documents/vscodeprojects/wizink/class.h \
+ /home/chiefkat/Documents/vscodeprojects/wizink/world.h \
  /usr/include/c++/13.2.1/iostream \
  /usr/include/c++/13.2.1/bits/requires_hosted.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -702,4 +703,8 @@ CMakeFiles/game.dir/main.cpp.o: \
  /usr/include/asio/windows/random_access_handle.hpp \
  /usr/include/asio/windows/stream_handle.hpp \
  /usr/include/asio/writable_pipe.hpp /usr/include/asio/write.hpp \
- /usr/include/asio/write_at.hpp /usr/include/asio/impl/write_at.hpp
+ /usr/include/asio/write_at.hpp /usr/include/asio/impl/write_at.hpp \
+ /usr/include/c++/13.2.1/thread \
+ /usr/include/c++/13.2.1/bits/this_thread_sleep.h \
+ /usr/include/c++/13.2.1/deque /usr/include/c++/13.2.1/bits/stl_deque.h \
+ /usr/include/c++/13.2.1/bits/deque.tcc

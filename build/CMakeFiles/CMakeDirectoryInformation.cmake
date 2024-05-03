@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/chiefkat/Documents/vscodeprojects/wizink")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/chiefkat/Documents/vscodeprojects/wizink/build-linux")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/chiefkat/Documents/vscodeprojects/wizink/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

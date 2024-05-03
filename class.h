@@ -1,13 +1,14 @@
 #ifndef CLASS_H
 #define CLASS_H
 
-#include <iostream>
+#include "world.h"
 
 struct baseChar
 {
     const char *tag;
     int speed, weight;
     bool dead;
+    location *current_location;
 };
 
 // yes I'm proud of this

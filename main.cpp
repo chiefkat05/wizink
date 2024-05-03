@@ -24,9 +24,35 @@
 
 #include "multiplayer.h"
 
+enum class CustomMsgTypes : uint32_t
+{
+    // implement locations that have positional points within them
+    FORCE,
+    MOVE,
+    ALERT
+};
+
+class WizClient : public client_interface<CustomMsgTypes>
+{
+public:
+    bool cforce(baseChar *parent, baseChar *inflictor)
+    {
+        message<CustomMsgTypes> msg;
+        msg.header.id = CustomMsgTypes::FORCE;
+        msg << parent << inflictor;
+        Send(msg);
+    }
+};
+
 int main()
 {
     std::string input;
+
+    baseChar player = {"The player", 4, 2, false, &locs[0]};
+
+    lookNearby(player.current_location);
+
+    // server();
 
     // std::cout << "You are a 'wizard', trained and equipped with a reality-bending engine which modern technology (as far as you know,) can scarcely compete with.\n"
     //              "Having grown and lived among fellow magic-wielders in a horrid cult, you've now decided to make your move and escape.\n\n";
