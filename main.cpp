@@ -40,17 +40,76 @@ public:
         message<CustomMsgTypes> msg;
         msg.header.id = CustomMsgTypes::FORCE;
         msg << parent << inflictor;
-        Send(msg);
+        // MessageClient(msg);
+
+        return true;
+    }
+};
+class WizServer : public server_interface<CustomMsgTypes>
+{
+public:
+    WizServer(uint16_t nPort) : server_interface<CustomMsgTypes>(nPort)
+    {
+    }
+
+protected:
+    virtual bool OnClientConnect(std::shared_ptr<connection<CustomMsgTypes>> client)
+    {
+        return true;
+    }
+
+    virtual void OnClientDisconnect(std::shared_ptr<connection<CustomMsgTypes>> client)
+    {
+    }
+
+    virtual void OnMessage(std::shared_ptr<connection<CustomMsgTypes>> client, message<CustomMsgTypes> &msg)
+    {
+    }
+};
+
+class CustomServer : public server_interface<CustomMsgTypes>
+{
+public:
+    CustomServer(uint16_t nPort) : server_interface<CustomMsgTypes>(nPort) {}
+
+protected:
+    virtual bool OnClientConnect(std::shared_ptr<connection<CustomMsgTypes>> client)
+    {
+        return true;
+    }
+
+    virtual void OnClientDisconnect(std::shared_ptr<connection<CustomMsgTypes>> client)
+    {
+    }
+
+    virtual void OnMessage(std::shared_ptr<connection<CustomMsgTypes>> client, message<CustomMsgTypes> msg)
+    {
     }
 };
 
 int main()
 {
-    std::string input;
+    CustomServer server(60000);
+    server.Start();
 
-    baseChar player = {"The player", 4, 2, false, &locs[0]};
+    while (1)
+    {
+        server.Update();
+    }
+    // std::string input;
 
-    lookNearby(player.current_location);
+    // baseChar player = {"The player", 4, 2, false, &locs[0]};
+
+    // lookNearby(player.current_location);
+
+    // WizServer server(60000); // just pretend it works and keep going I guess
+    // then give up on the retarded fuckery and just go with the official documentation
+    // server.Start();
+
+    // while (true)
+    // {
+    //     server.Update();
+    // }
 
     // server();
 
