@@ -24,102 +24,11 @@
 
 #include "multiplayer.h"
 
-// enum class CustomMsgTypes : uint32_t
-// {
-//     ServerAccept,
-//     ServerDeny,
-//     ServerPing,
-//     MessageAll,
-//     ServerMessage,
-//     Chat
-// };
-// class WizClient : public client_interface<CustomMsgTypes>
-// {
-// public:
-//     void PingServer()
-//     {
-//         message<CustomMsgTypes> msg;
-//         msg.header.id = CustomMsgTypes::ServerPing;
-
-//         // Caution with this...
-//         std::chrono::system_clock::time_point timeNow = std::chrono::system_clock::now();
-
-//         msg << timeNow;
-//         Send(msg);
-//     }
-
-//     void MessageAll()
-//     {
-//         message<CustomMsgTypes> msg;
-//         msg.header.id = CustomMsgTypes::MessageAll;
-//         Send(msg);
-//     }
-//     void Chat(std::string input)
-//     {
-//         message<CustomMsgTypes> msg;
-//         msg.header.id = CustomMsgTypes::Chat;
-//         msg << "Client says: " << input;
-//         Send(msg);
-//     }
-// };
-
-// class WizServer : public server_interface<CustomMsgTypes>
-// {
-// public:
-//     WizServer(uint16_t nPort) : server_interface<CustomMsgTypes>(nPort)
-//     {
-//     }
-
-// protected:
-//     virtual bool OnClientConnect(std::shared_ptr<connection<CustomMsgTypes>> client)
-//     {
-//         message<CustomMsgTypes> msg;
-//         msg.header.id = CustomMsgTypes::ServerAccept;
-//         client->Send(msg);
-//         return true;
-//     }
-
-//     // Called when a client appears to have disconnected
-//     virtual void OnClientDisconnect(std::shared_ptr<connection<CustomMsgTypes>> client)
-//     {
-//         std::cout << "Removing client [" << client->GetID() << "]\n";
-//     }
-
-//     // Called when a message arrives
-//     virtual void OnMessage(std::shared_ptr<connection<CustomMsgTypes>> client, message<CustomMsgTypes> &msg)
-//     {
-//         switch (msg.header.id)
-//         {
-//         case CustomMsgTypes::ServerPing:
-//         {
-//             std::cout << "[" << client->GetID() << "]: Server Ping\n";
-
-//             // Simply bounce message back to client
-//             client->Send(msg);
-//         }
-//         break;
-
-//         case CustomMsgTypes::MessageAll:
-//         {
-//             std::cout << "[" << client->GetID() << "]: Message All\n";
-
-//             // Construct a new message and send it to all clients
-//             message<CustomMsgTypes> msg;
-//             msg.header.id = CustomMsgTypes::ServerMessage;
-//             msg << client->GetID();
-//             MessageAllClients(msg, client);
-//         }
-//         break;
-
-//         case CustomMsgTypes::Chat:
-//         {
-//             std::string output;
-//             msg >> output;
-//             std::cout << "[" << client->GetID() << "]: " << output << "\n";
-//         }
-//         }
-//     }
-// };
+enum mHeaders
+{
+    PING,
+    CHAT
+};
 
 int main()
 {
@@ -128,95 +37,35 @@ int main()
     std::cout << "type 'server' to open a server on port 4444\n"
                  "or type 'client' to attempt a client connection to 127.0.0.1/4444\n";
 
+    message msg;
+
+    msg.header.id = mHeaders::PING;
+
+    int f = 549;
+    double d = 75.36;
+
+    msg << f << d;
+
+    f = 2;
+    d = 2.0f;
+
+    msg >> d >> f;
+
     std::cin >> input;
     if (input == "server")
     {
         // WizServer server(4444);
         // server.Start();
+        server wizServer(4444);
+        wizServer.Start();
 
-        // while (1)
-        // {
-        //     server.Update(-1, true);
-        // }
+        while (1)
+        {
+            wizServer.Update(-1);
+        }
     }
     if (input == "client")
     {
-        // WizClient client;
-        // client.Connect("127.0.0.1", 4444);
-
-        // std::cout << "type 'quit' when you want to quit, or send a message to the server with anything else.\n";
-        // while (std::cin >> input && input != "quit")
-        // {
-        //     // client.Send(input);
-        //     // message<CustomMsgTypes> msg;
-        //     // msg.header.id = CustomMsgTypes::ServerPing;
-        //     // client.MessageAll();
-        //     std::cout << input << " is the current input\n";
-        //     if (input == "ping")
-        //     {
-        //         client.PingServer();
-        //     }
-        //     if (input == "mAll")
-        //     {
-        //         client.MessageAll();
-        //     }
-        //     if (input == "chat")
-        //     {
-        //         client.Chat(input);
-        //     }
-        //     input = "";
-
-        //     if (client.IsConnected())
-        //     {
-        //         if (!client.Incoming().empty())
-        //         {
-
-        //             auto msg = client.Incoming().pop_front().msg;
-
-        //             switch (msg.header.id)
-        //             {
-        //             case CustomMsgTypes::ServerAccept:
-        //             {
-        //                 // Server has responded to a ping request
-        //                 std::cout << "Server Accepted Connection\n";
-        //             }
-        //             break;
-
-        //             case CustomMsgTypes::ServerPing:
-        //             {
-        //                 // Server has responded to a ping request
-        //                 std::chrono::system_clock::time_point timeNow = std::chrono::system_clock::now();
-        //                 std::chrono::system_clock::time_point timeThen;
-        //                 msg >> timeThen;
-        //                 std::cout << "Ping: " << std::chrono::duration<double>(timeNow - timeThen).count() << "\n";
-        //             }
-        //             break;
-
-        //             case CustomMsgTypes::ServerMessage:
-        //             {
-        //                 // Server has responded to a ping request
-        //                 uint32_t clientID;
-        //                 msg >> clientID;
-        //                 std::cout << "Hello from [" << clientID << "]\n";
-        //             }
-        //             break;
-        //             }
-        //         }
-        //     }
-        //     else
-        //     {
-        //         std::cout << "Server Down\n";
-        //         return -1;
-        //     }
-
-        // msg << input;
-        // client.Send(msg);
-        // if (!client.Incoming().empty())
-        // {
-        //     auto msg = client.Incoming().pop_front().msg;
-
-        //     std::cout << msg << "is the message";
-        // }
     }
     // }
     // std::string input;
