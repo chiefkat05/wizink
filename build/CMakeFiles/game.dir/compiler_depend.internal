@@ -4,6 +4,7 @@
 CMakeFiles/game.dir/main.cpp.o
  /home/chiefkat/Documents/vscodeprojects/wizink/main.cpp
  /home/chiefkat/Documents/vscodeprojects/wizink/class.h
+ /home/chiefkat/Documents/vscodeprojects/wizink/data.h
  /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h
  /home/chiefkat/Documents/vscodeprojects/wizink/world.h
  /usr/include/alloca.h
@@ -800,9 +801,7 @@ CMakeFiles/game.dir/main.cpp.o
 
 CMakeFiles/game.dir/multiplayer.cpp.o
  /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.cpp
- /home/chiefkat/Documents/vscodeprojects/wizink/class.h
  /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h
- /home/chiefkat/Documents/vscodeprojects/wizink/world.h
  /usr/include/alloca.h
  /usr/include/arpa/inet.h
  /usr/include/asio.hpp
@@ -1496,7 +1495,6 @@ CMakeFiles/game.dir/multiplayer.cpp.o
  /usr/include/c++/14.1.1/initializer_list
  /usr/include/c++/14.1.1/ios
  /usr/include/c++/14.1.1/iosfwd
- /usr/include/c++/14.1.1/iostream
  /usr/include/c++/14.1.1/istream
  /usr/include/c++/14.1.1/iterator
  /usr/include/c++/14.1.1/limits

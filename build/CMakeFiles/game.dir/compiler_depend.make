@@ -3,6 +3,7 @@
 
 CMakeFiles/game.dir/main.cpp.o: /home/chiefkat/Documents/vscodeprojects/wizink/main.cpp \
   /home/chiefkat/Documents/vscodeprojects/wizink/class.h \
+  /home/chiefkat/Documents/vscodeprojects/wizink/data.h \
   /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h \
   /home/chiefkat/Documents/vscodeprojects/wizink/world.h \
   /usr/include/alloca.h \
@@ -798,9 +799,7 @@ CMakeFiles/game.dir/main.cpp.o: /home/chiefkat/Documents/vscodeprojects/wizink/m
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/syslimits.h
 
 CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.cpp \
-  /home/chiefkat/Documents/vscodeprojects/wizink/class.h \
   /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h \
-  /home/chiefkat/Documents/vscodeprojects/wizink/world.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
   /usr/include/asio.hpp \
@@ -1494,7 +1493,6 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
   /usr/include/c++/14.1.1/initializer_list \
   /usr/include/c++/14.1.1/ios \
   /usr/include/c++/14.1.1/iosfwd \
-  /usr/include/c++/14.1.1/iostream \
   /usr/include/c++/14.1.1/istream \
   /usr/include/c++/14.1.1/iterator \
   /usr/include/c++/14.1.1/limits \
@@ -2086,6 +2084,10 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 
 /usr/include/bits/types/sig_atomic_t.h:
 
+/usr/include/bits/types/struct_iovec.h:
+
+/usr/include/asio/detail/non_const_lvalue.hpp:
+
 /usr/include/asio/detail/keyword_tss_ptr.hpp:
 
 /usr/include/asio/windows/basic_stream_handle.hpp:
@@ -2174,21 +2176,17 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 
 /usr/include/bits/termios-tcflow.h:
 
-/usr/include/asio/impl/redirect_error.hpp:
+/usr/include/bits/waitstatus.h:
 
-/usr/include/asio/execution/impl/bad_executor.ipp:
+/usr/include/asio/generic/datagram_protocol.hpp:
 
-/usr/include/bits/poll.h:
+/usr/include/asio/execution/relationship.hpp:
 
-/usr/include/asio/detail/date_time_fwd.hpp:
+/usr/include/bits/statx-generic.h:
 
-/usr/include/asio/detail/resolve_endpoint_op.hpp:
+/usr/include/asio/detail/impl/signal_set_service.ipp:
 
-/usr/include/asio/detail/handler_tracking.hpp:
-
-/usr/include/termios.h:
-
-/usr/include/asio/redirect_error.hpp:
+/usr/include/asio/serial_port_base.hpp:
 
 /usr/include/asio/detail/wait_op.hpp:
 
@@ -2300,8 +2298,6 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 
 /usr/include/asio/detail/impl/descriptor_ops.ipp:
 
-/usr/include/asio/detail/consuming_buffers.hpp:
-
 /usr/include/asio/ip/impl/host_name.ipp:
 
 /usr/include/asio/detail/wrapped_handler.hpp:
@@ -2332,6 +2328,8 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 
 /usr/include/bits/siginfo-consts-arch.h:
 
+/home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h:
+
 /usr/include/asio/associated_cancellation_slot.hpp:
 
 /usr/include/bits/types/struct_itimerspec.h:
@@ -2348,13 +2346,39 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 
 /usr/include/asio/detail/epoll_reactor.hpp:
 
-/usr/include/asio/buffers_iterator.hpp:
+/usr/include/asio/detail/consuming_buffers.hpp:
 
-/usr/include/asio/detail/wait_handler.hpp:
+/home/chiefkat/Documents/vscodeprojects/wizink/data.h:
 
-/usr/include/asio/detail/impl/posix_serial_port_service.ipp:
+/usr/include/asio/detail/impl/reactive_descriptor_service.ipp:
 
-/home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h:
+/usr/include/bits/ss_flags.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stddef.h:
+
+/usr/include/c++/14.1.1/cstdint:
+
+/usr/include/asio/buffered_read_stream.hpp:
+
+/usr/include/asio/prefer.hpp:
+
+/usr/include/asio/detail/posix_thread.hpp:
+
+/usr/include/c++/14.1.1/functional:
+
+/usr/include/asio/detail/reactive_socket_sendto_op.hpp:
+
+/usr/include/asio/compose.hpp:
+
+/usr/include/bits/sigcontext.h:
+
+/usr/include/bits/types/__sigval_t.h:
+
+/usr/include/asio/detail/throw_exception.hpp:
+
+/usr/include/asio/associator.hpp:
+
+/usr/include/asio/basic_signal_set.hpp:
 
 /usr/include/asio.hpp:
 
@@ -2362,11 +2386,7 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 
 /usr/include/asm/ioctls.h:
 
-/usr/include/asio/detail/throw_exception.hpp:
-
-/usr/include/asio/associator.hpp:
-
-/usr/include/asio/basic_signal_set.hpp:
+/usr/include/bits/getopt_posix.h:
 
 /usr/include/asio/detail/mutex.hpp:
 
@@ -2394,25 +2414,17 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 
 /usr/include/asio/detail/deadline_timer_service.hpp:
 
-/usr/include/bits/waitstatus.h:
+/usr/include/asio/buffers_iterator.hpp:
 
-/usr/include/asio/generic/datagram_protocol.hpp:
+/usr/include/asio/detail/wait_handler.hpp:
 
-/usr/include/asio/execution/relationship.hpp:
-
-/usr/include/bits/statx-generic.h:
-
-/usr/include/asio/detail/impl/signal_set_service.ipp:
-
-/usr/include/asio/serial_port_base.hpp:
+/usr/include/asio/detail/impl/posix_serial_port_service.ipp:
 
 /usr/include/asio/basic_stream_socket.hpp:
 
-/usr/include/bits/getopt_posix.h:
+/usr/include/asio/associated_immediate_executor.hpp:
 
 /usr/include/asio/impl/any_completion_executor.ipp:
-
-/usr/include/asio/associated_immediate_executor.hpp:
 
 /usr/include/bits/types/error_t.h:
 
@@ -2445,6 +2457,16 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 /usr/include/bits/types/cookie_io_functions_t.h:
 
 /usr/include/asm-generic/posix_types.h:
+
+/usr/include/asio/detail/resolve_endpoint_op.hpp:
+
+/usr/include/asio/detail/handler_tracking.hpp:
+
+/usr/include/asio/detail/date_time_fwd.hpp:
+
+/usr/include/termios.h:
+
+/usr/include/asio/redirect_error.hpp:
 
 /usr/include/asio/detail/socket_types.hpp:
 
@@ -2494,29 +2516,11 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 
 /usr/include/asio/detail/executor_op.hpp:
 
-/usr/include/asio/detail/impl/reactive_descriptor_service.ipp:
+/usr/include/asio/impl/redirect_error.hpp:
 
-/usr/include/bits/ss_flags.h:
+/usr/include/asio/execution/impl/bad_executor.ipp:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stddef.h:
-
-/usr/include/c++/14.1.1/cstdint:
-
-/usr/include/asio/buffered_read_stream.hpp:
-
-/usr/include/asio/prefer.hpp:
-
-/usr/include/asio/detail/posix_thread.hpp:
-
-/usr/include/c++/14.1.1/functional:
-
-/usr/include/asio/detail/reactive_socket_sendto_op.hpp:
-
-/usr/include/asio/compose.hpp:
-
-/usr/include/bits/sigcontext.h:
-
-/usr/include/bits/types/__sigval_t.h:
+/usr/include/bits/poll.h:
 
 /usr/include/asio/basic_streambuf.hpp:
 
@@ -2530,9 +2534,9 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 
 /usr/include/asio/detail/posix_static_mutex.hpp:
 
-/usr/include/asio/basic_writable_pipe.hpp:
-
 /usr/include/asm-generic/ioctls.h:
+
+/usr/include/asio/basic_writable_pipe.hpp:
 
 /usr/include/asio/is_executor.hpp:
 
@@ -3181,7 +3185,3 @@ CMakeFiles/game.dir/multiplayer.cpp.o: /home/chiefkat/Documents/vscodeprojects/w
 /usr/include/asio/query.hpp:
 
 /usr/include/bits/types/sigevent_t.h:
-
-/usr/include/asio/detail/non_const_lvalue.hpp:
-
-/usr/include/bits/types/struct_iovec.h:

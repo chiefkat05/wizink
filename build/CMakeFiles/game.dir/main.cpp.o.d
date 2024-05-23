@@ -2,8 +2,6 @@ CMakeFiles/game.dir/main.cpp.o: \
  /home/chiefkat/Documents/vscodeprojects/wizink/main.cpp \
  /usr/include/stdc-predef.h \
  /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h \
- /home/chiefkat/Documents/vscodeprojects/wizink/class.h \
- /home/chiefkat/Documents/vscodeprojects/wizink/world.h \
  /usr/include/c++/14.1.1/iostream \
  /usr/include/c++/14.1.1/bits/requires_hosted.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -711,4 +709,6 @@ CMakeFiles/game.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/this_thread_sleep.h \
  /usr/include/c++/14.1.1/deque /usr/include/c++/14.1.1/bits/stl_deque.h \
  /usr/include/c++/14.1.1/bits/deque.tcc \
- /home/chiefkat/Documents/vscodeprojects/wizink/data.h
+ /home/chiefkat/Documents/vscodeprojects/wizink/data.h \
+ /home/chiefkat/Documents/vscodeprojects/wizink/world.h \
+ /home/chiefkat/Documents/vscodeprojects/wizink/class.h

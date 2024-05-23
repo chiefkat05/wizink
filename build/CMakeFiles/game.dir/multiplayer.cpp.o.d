@@ -2,8 +2,6 @@ CMakeFiles/game.dir/multiplayer.cpp.o: \
  /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.cpp \
  /usr/include/stdc-predef.h \
  /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h \
- /home/chiefkat/Documents/vscodeprojects/wizink/class.h \
- /home/chiefkat/Documents/vscodeprojects/wizink/world.h \
  /usr/include/c++/14.1.1/iostream \
  /usr/include/c++/14.1.1/bits/requires_hosted.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \

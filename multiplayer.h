@@ -2,7 +2,7 @@
 #define MULTIPLAYER_H
 
 #define ASIO_STANDALONE
-#include "class.h"
+#include <iostream>
 #include <asio.hpp>
 #include <string>
 #include <thread>
