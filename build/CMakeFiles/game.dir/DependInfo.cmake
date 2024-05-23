@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/chiefkat/Documents/vscodeprojects/wizink/main.cpp" "CMakeFiles/game.dir/main.cpp.o" "gcc" "CMakeFiles/game.dir/main.cpp.o.d"
+  "/home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.cpp" "CMakeFiles/game.dir/multiplayer.cpp.o" "gcc" "CMakeFiles/game.dir/multiplayer.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

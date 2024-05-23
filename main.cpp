@@ -23,6 +23,7 @@
 //     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #include "multiplayer.h"
+#include "data.h"
 
 enum mHeaders
 {
@@ -35,7 +36,7 @@ int main()
     std::string input;
 
     std::cout << "type 'server' to open a server on port 4444\n"
-                 "or type 'client' to attempt a client connection to 127.0.0.1/4444\n";
+                 "or type 'client' to attempt a client connection to 127.0.0.1/4444\n--> ";
 
     message msg;
 
@@ -54,8 +55,6 @@ int main()
     std::cin >> input;
     if (input == "server")
     {
-        // WizServer server(4444);
-        // server.Start();
         server wizServer(4444);
         wizServer.Start();
 
@@ -66,17 +65,64 @@ int main()
     }
     if (input == "client")
     {
+        std::cout << "please enter the ip address of the server you would like to connect to:\n-->";
+        std::cin >> input;
+        client cl;
+        cl.Connect(input, "4444");
+        std::array<char, 128> msgInput;
+
+        std::thread readThr([&cl]()
+                            {
+                                while (1)
+                                {
+                                    if (!cl.Incoming().empty())
+                                    {
+                                        auto msg = cl.Incoming().pop_front().msg;
+
+                                        switch(msg.header.id)
+                                        {
+                                            case 0:
+                                            std::cout << "server message - " << msg.body.data() << "\n";
+                                        break;
+                                        case 1:
+                                            uint32_t cID;
+                                            // std::cout << msg.body.size() << ", " << (int)msg.body.data() << ", " << cID << " huh\n";
+                                            msg >> cID;
+                                            // std::cout << msg.body.size() << ", " << cID << " huh2\n";
+                                            std::cout << "hello from client " << std::to_string(cID) << "\n";
+                                            break;
+                                        default:
+                                            std::cout << "received unknown message type\n";
+                                            break;
+                                        }
+                                    }
+                                } });
+
+        while (msgInput.data() != "quit")
+        {
+            if (!cl.IsConnected())
+                break;
+
+            std::cin >> msgInput.data();
+            if (msgInput.front() == '@')
+            {
+                cl.MessageAll(msgInput);
+            }
+            else
+            {
+                cl.SendMessage(msgInput);
+            }
+        }
+
+        cl.Disconnect();
+
+        if (readThr.joinable())
+            readThr.join();
     }
-    // }
-    // std::string input;
 
     // baseChar player = {"The player", 4, 2, false, &locs[0]};
 
     // lookNearby(player.current_location);
-
-    // WizServer server(60000); // just pretend it works and keep going I guess
-    // then give up on the retarded fuckery and just go with the official documentation
-    // server.Start();
 
     // while (true)
     // {

@@ -1,5 +1,5 @@
-CMakeFiles/game.dir/main.cpp.o: \
- /home/chiefkat/Documents/vscodeprojects/wizink/main.cpp \
+CMakeFiles/game.dir/multiplayer.cpp.o: \
+ /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.cpp \
  /usr/include/stdc-predef.h \
  /home/chiefkat/Documents/vscodeprojects/wizink/multiplayer.h \
  /home/chiefkat/Documents/vscodeprojects/wizink/class.h \
@@ -710,5 +710,4 @@ CMakeFiles/game.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/thread \
  /usr/include/c++/14.1.1/bits/this_thread_sleep.h \
  /usr/include/c++/14.1.1/deque /usr/include/c++/14.1.1/bits/stl_deque.h \
- /usr/include/c++/14.1.1/bits/deque.tcc \
- /home/chiefkat/Documents/vscodeprojects/wizink/data.h
+ /usr/include/c++/14.1.1/bits/deque.tcc

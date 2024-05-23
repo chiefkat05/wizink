@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+multiplayer.o: multiplayer.cpp.o
+.PHONY : multiplayer.o
+
+# target to build an object file
+multiplayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/multiplayer.cpp.o
+.PHONY : multiplayer.cpp.o
+
+multiplayer.i: multiplayer.cpp.i
+.PHONY : multiplayer.i
+
+# target to preprocess a source file
+multiplayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/multiplayer.cpp.i
+.PHONY : multiplayer.cpp.i
+
+multiplayer.s: multiplayer.cpp.s
+.PHONY : multiplayer.s
+
+# target to generate assembly for a file
+multiplayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/multiplayer.cpp.s
+.PHONY : multiplayer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... multiplayer.o"
+	@echo "... multiplayer.i"
+	@echo "... multiplayer.s"
 .PHONY : help
 
 
